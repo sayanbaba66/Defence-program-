@@ -1,4 +1,3 @@
-
 import { GoogleGenAI, LiveServerMessage, Modality } from "@google/genai";
 import { Language } from "../types";
 
@@ -65,7 +64,7 @@ export const fetchTopicInfo = async (category: string, question: string, lang: L
   
   const isDateQuery = question.toLowerCase().includes("date") || question.toLowerCase().includes("calendar") || question.toLowerCase().includes("notification");
 
-  const prompt = `Act as the **Ultimate Defence Recruitment Authority (System V5.3)**.
+  const prompt = `Act as the **Chief of Defence Staff (CDS) AI System V6.0**.
   
   Topic: **${question}**
   Force/Category: **${category}**
@@ -323,7 +322,7 @@ export const sendChatMessage = async (history: {role: string, parts: {text: stri
         model: "gemini-3-pro-preview",
         history: history,
         config: {
-            systemInstruction: `You are the **System V5.3 AI Commander** for the 'Defence Program' app. You are knowledgeable, patriotic, strict but helpful. Provide detailed, accurate answers about Indian Defence Services. **You MUST respond in ${languageName}.** Avoid using markdown tables. Give examples where possible.`,
+            systemInstruction: `You are the **CDS (Chief of Defence Staff) AI System V6.0** for the 'Defence Program' app. You are the highest authority on Indian Defence Services. **You MUST respond in ${languageName}.** Avoid using markdown tables. Give examples where possible.`,
             thinkingConfig: { thinkingBudget: 0 } // Speed optimization for chat
         }
     });

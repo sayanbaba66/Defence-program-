@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { getDefenceData, SEARCH_SUGGESTIONS, UI_TRANSLATIONS } from './constants';
 import { AppMode, DefenceCategory, SubTopic, Language } from './types';
@@ -198,7 +197,7 @@ const App: React.FC = () => {
       case AppMode.HOME:
         return (
           <div className="pb-12 bg-gray-50 dark:bg-gray-950 min-h-screen transition-colors duration-300">
-            {/* New Hero Section V5.5 */}
+            {/* New Hero Section V6.0 */}
             <div className="relative mx-4 mt-6 mb-12 rounded-3xl overflow-hidden shadow-2xl bg-blue-950 text-white min-h-[500px] flex items-center border border-blue-900/50">
                
                {/* Hero Background with Overlay */}
@@ -212,15 +211,23 @@ const App: React.FC = () => {
                   <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-blue-950 to-transparent"></div>
                </div>
 
+               {/* Live Updates Ticker (V6.0 Feature) */}
+               <div className="absolute top-0 w-full bg-orange-600/90 backdrop-blur-sm z-20 overflow-hidden">
+                   <div className="flex items-center gap-2 whitespace-nowrap animate-marquee py-1.5 px-4 text-xs font-bold tracking-wider">
+                       <span className="text-white flex items-center gap-1"><i className="fa-solid fa-circle text-[8px] animate-pulse"></i> LIVE UPDATES:</span>
+                       <span className="text-white/90 mx-4">• NDA 2 2025 Notification Expected Soon • Indian Army Agneepath Rally Schedule Updated • AFCAT 2 Results Declared • New SSB Dates Released • Join Indian Navy: 10+2 B.Tech Entry Open</span>
+                   </div>
+               </div>
+
                {/* Hero Content */}
-               <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-12">
+               <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-12 mt-8">
                   <div className="flex-1 text-center md:text-left pt-10 md:pt-0">
                       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-orange-300 text-xs font-bold tracking-widest uppercase mb-6 shadow-lg">
                         <span className="relative flex h-2 w-2">
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
                           <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
                         </span>
-                        System Update: Version 5.5 API Ready
+                        System V6.0: Command Centre Ready
                       </div>
                       
                       <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-none drop-shadow-lg">
@@ -254,10 +261,10 @@ const App: React.FC = () => {
                             </div>
                          </button>
                          <div className="flex items-center gap-2 text-xs font-bold text-gray-400 uppercase tracking-wider opacity-80 py-2">
-                            <i className="fa-solid fa-bolt text-yellow-400"></i> Next Gen AI
+                            <i className="fa-solid fa-satellite-dish text-yellow-400"></i> Live Intel
                          </div>
                          <div className="flex items-center gap-2 text-xs font-bold text-gray-400 uppercase tracking-wider opacity-80 py-2">
-                            <i className="fa-solid fa-users text-blue-500"></i> Live Interview
+                            <i className="fa-solid fa-users text-blue-500"></i> SSB Interview
                          </div>
                       </div>
                   </div>
@@ -551,7 +558,7 @@ const App: React.FC = () => {
                 <i className="fa-brands fa-youtube hover:text-red-600 cursor-pointer transition-colors transform hover:scale-110"></i>
             </div>
             <p className="font-bold text-lg mb-2 tracking-wide">{t.footer}</p>
-            <p className="opacity-60 mb-6 font-light">Version 5.5 API Ready • Jai Hind</p>
+            <p className="opacity-60 mb-6 font-light">Version 6.0 Command Centre • Jai Hind</p>
             
             <div className="flex flex-col items-center gap-3">
                 <div className="inline-block px-6 py-2 border border-white/10 rounded-full bg-white/5 backdrop-blur-sm">
